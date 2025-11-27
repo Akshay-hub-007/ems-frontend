@@ -16,6 +16,11 @@ jobs:
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
 
+      - name: Set kubeconfig
+        run: |
+          mkdir -p ~/.kube
+          echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
+
       - name: Update frontend image in Kubernetes
         run: |
           kubectl set image deployment/empfrontend \
