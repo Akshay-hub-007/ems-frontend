@@ -16,10 +16,14 @@ jobs:
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
 
-      - name: Set kubeconfig
+      - name: Decode & set kubeconfig
         run: |
           mkdir -p ~/.kube
-          echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
+          echo "${{ secrets.KUBE_CONFIG_BASE64 }}" | base64 -d > ~/.kube/config
+          chmod 600 ~/.kube/config
+
+      - name: Test kubectl cluster connection
+        run: kubectl get nodes
 
       - name: Update frontend image in Kubernetes
         run: |
