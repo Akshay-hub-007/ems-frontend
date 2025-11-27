@@ -1,0 +1,53 @@
+/* Page Container */
+.payslips-container {
+  padding: 20px;
+  background: #ECFDF5; /* soft mint background */
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Page Title */
+.payslips-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #064E3B; /* deep emerald */
+}
+
+/* Table */
+.payslips-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.payslips-table th,
+.payslips-table td {
+  border: 1px solid #CCEAE5; /* light teal border */
+  padding: 10px;
+  text-align: left;
+}
+
+.payslips-table th {
+  background: #DFF9F3; /* soft teal header */
+  color: #064E3B;
+  font-weight: 600;
+}
+
+/* Download Button */
+.download-btn {
+  background: #14B8A6; /* primary teal */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.download-btn:hover {
+  background: #0D9488; /* darker teal */
+}

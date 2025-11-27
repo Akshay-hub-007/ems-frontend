@@ -1,0 +1,194 @@
+/* ===== Profile Container ===== */
+.profile-container {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ECFDF5; /* light emerald background */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  transition: transform 0.2s ease-in-out;
+}
+
+.profile-container:hover {
+  transform: translateY(-3px);
+}
+
+/* Title */
+.profile-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #064E3B; /* deep emerald */
+}
+
+/* Profile Photo Section */
+.profile-photo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #14B8A6; /* teal border */
+  background: #F0FDFA;
+}
+
+.file-input {
+  flex: 1;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Form Labels and Inputs */
+.profile-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #064E3B;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #A7EDE4;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.profile-form input:focus,
+.profile-form select:focus {
+  outline: none;
+  border-color: #14B8A6;
+  box-shadow: 0 0 0 2px rgba(20,184,166,0.2);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.profile-form button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  background: #14B8A6; /* teal button */
+  color: #fff;
+  transition: 0.2s;
+}
+
+.profile-form button:hover {
+  background: #0D9488; /* darker teal on hover */
+}
+
+.profile-form button.secondary {
+  background: #D1FAE5; /* light emerald secondary */
+  color: #064E3B;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.35);
+  z-index: 9999;
+}
+
+/* Popup Box */
+.popup-box {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 260px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  animation: popupFade 0.25s ease-in-out;
+}
+
+/* Popup Title */
+.popup-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #064E3B;
+  margin-bottom: 16px;
+}
+
+/* OK Button */
+.popup-ok {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  background: #14B8A6;
+  color: white;
+  transition: 0.2s;
+}
+
+.popup-ok:hover {
+  background: #0D9488;
+  transform: scale(1.03);
+}
+
+/* Popup Fade Animation */
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .profile-container {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-title {
+    font-size: 20px;
+  }
+
+  .profile-form input[type="text"],
+  .profile-form input[type="email"] {
+    padding: 6px 8px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .profile-form button {
+    width: 100%;
+  }
+}

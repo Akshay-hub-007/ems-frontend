@@ -1,0 +1,284 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2563eb; /* primary */
+  color: white;
+  padding: 12px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-welcome {
+  font-size: 15px;
+}
+
+.btn-logout {
+  background: #1e40af;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background: #1c3a99;
+}
+
+/* =========================
+   DASHBOARD LAYOUT
+========================= */
+.dashboard-container {
+  margin-top: 50px;
+  display: flex;
+}
+
+/* SIDEBAR */
+.dashboard-sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 220px;
+  height: calc(100% - 50px);
+  background-color: #1f2937; /* dark gray */
+  padding-top: 20px;
+  color: white;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar-link {
+  padding: 12px 20px;
+  margin: 8px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.sidebar-link:hover {
+  background-color: #2563eb;
+}
+
+/* MAIN AREA */
+.dashboard-main {
+  padding: 20px;
+  width: calc(100% - 220px);
+  margin-left: 220px;
+}
+
+/* =========================
+   PROFILE CARD
+========================= */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #2563eb;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.profile-role {
+  color: #374151;
+  font-size: 14px;
+}
+
+.profile-dept {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =========================
+   ATTENDANCE ACTIONS
+========================= */
+.attendance-actions {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn-present {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-present:hover {
+  background: #16a34a;
+}
+
+.btn-absent {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-absent:hover {
+  background: #dc2626;
+}
+
+/* =========================
+   TABLES
+========================= */
+.attendance-section,
+.employee-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  margin-top: 20px;
+}
+
+.attendance-section th,
+.employee-section th {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+}
+
+.attendance-section td,
+.employee-section td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-view {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.btn-view:hover {
+  background: #1e40af;
+}
+
+.btn-edit {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.btn-edit:hover {
+  background: #d97706;
+}
+
+.btn-delete {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+}
+
+/* =========================
+   LINK CARDS
+========================= */
+.dashboard-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.link-card {
+  background: #2563eb;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.link-card:hover {
+  background: #1e40af;
+}

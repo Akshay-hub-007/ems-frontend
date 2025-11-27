@@ -1,0 +1,88 @@
+/* ============================
+   Salary History Styles
+   ============================ */
+.salary-container {
+  padding: 20px;
+  background: #ECFDF5; /* light emerald background */
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.salary-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #064E3B; /* deep emerald for headings */
+}
+
+/* Topbar */
+.salary-topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.salary-search {
+  padding: 10px 14px;
+  border: 1px solid #A7EDE4; /* teal border */
+  border-radius: 6px;
+  font-size: 14px;
+  width: 250px;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.salary-search:focus {
+  border-color: #14B8A6;
+  box-shadow: 0 0 0 2px rgba(20,184,166,0.2);
+  outline: none;
+}
+
+/* Table */
+.salary-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.salary-table thead {
+  background: #D1FAE5; /* light emerald header */
+  font-weight: 600;
+}
+
+.salary-table th,
+.salary-table td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #A7EDE4; /* light teal border */
+}
+
+.salary-table th {
+  color: #064E3B; /* deep emerald text */
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.salary-table tr:hover {
+  background: #E6FFFA; /* subtle hover effect */
+  transition: background 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .salary-search {
+    width: 100%;
+  }
+
+  .salary-table th,
+  .salary-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

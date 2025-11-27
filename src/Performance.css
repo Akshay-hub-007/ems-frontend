@@ -1,0 +1,79 @@
+/* Page Container */
+.performance-container {
+  padding: 20px;
+  background: #ECFDF5; /* mint background */
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.performance-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #064E3B; /* deep emerald */
+}
+
+/* Table */
+.performance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.performance-table th,
+.performance-table td {
+  border: 1px solid #CCEAE5; /* subtle teal border */
+  padding: 10px;
+  text-align: left;
+}
+
+.performance-table th {
+  background: #DFF9F3; /* teal-tinted header */
+  color: #064E3B;
+  font-weight: 600;
+}
+
+/* Inputs */
+.rating-input,
+.feedback-input {
+  padding: 6px;
+  border: 1px solid #A7EDE4;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.rating-input:focus,
+.feedback-input:focus {
+  border-color: #14B8A6; /* teal */
+  box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2);
+  outline: none;
+}
+
+.rating-input {
+  width: 60px;
+}
+
+.feedback-input {
+  width: 240px;
+}
+
+/* Save Button */
+.btn-save {
+  background: #14B8A6; /* primary teal */
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.btn-save:hover {
+  background: #0D9488; /* darker teal */
+}

@@ -1,0 +1,136 @@
+/* ================================
+   GLOBAL COLOR VARIABLES
+================================ */
+:root {
+  --primary: #14B8A6;
+  --primary-dark: #0D9488;
+  --accent: #5EEAD4;
+
+  --background: #ECFDF5;
+  --surface: #FFFFFF;
+
+  --text-dark: #064E3B;
+  --text-light: #6EE7B7;
+
+  --success: #10B981;
+  --error: #F43F5E;
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 240px;
+  background-color: var(--primary-dark);
+  color: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+  color: var(--accent);
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-link:hover {
+  background-color: var(--primary);
+  color: var(--surface);
+}
+
+.sidebar-icon {
+  font-size: 1.2rem;
+}
+
+/* Active NavLink */
+.sidebar-link.active {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* Main Content area */
+.main-content {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  background-color: var(--background);
+  color: var(--text-dark);
+}
+
+/* Responsive Sidebar: Hide text when screen is small */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    padding: 15px 10px;
+    align-items: center;
+  }
+
+  .sidebar-title {
+    display: none;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    font-size: 0;
+    padding: 12px;
+  }
+
+  .sidebar-link .sidebar-icon {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-link:hover {
+    background-color: var(--primary);
+  }
+
+  /* Tooltip Effect */
+  .sidebar-link::after {
+    content: attr(title);
+    position: absolute;
+    left: 70px;
+    background: var(--primary);
+    color: var(--surface);
+    padding: 5px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .sidebar-link:hover::after {
+    opacity: 1;
+  }
+}

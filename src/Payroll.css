@@ -1,0 +1,84 @@
+/* Page container */
+.payroll-container {
+  padding: 20px;
+  background: #ECFDF5; /* soft mint background */
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.payroll-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #064E3B; /* deep emerald text */
+}
+
+/* Table */
+.payroll-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.payroll-table th,
+.payroll-table td {
+  border: 1px solid #CCEAE5; /* light teal border */
+  padding: 10px;
+  text-align: left;
+}
+
+.payroll-table th {
+  background: #DFF9F3; /* soft teal surface */
+  color: #064E3B;
+  font-weight: 600;
+}
+
+/* Salary Input */
+.salary-input {
+  width: 110px;
+  padding: 6px;
+  border: 1px solid #9DEAD8;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.salary-input:focus {
+  border-color: #14B8A6;
+  box-shadow: 0 0 4px rgba(20, 184, 166, 0.4);
+}
+
+/* Payslip Button */
+.btn-payslip {
+  background: #14B8A6; /* primary teal */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-right: 6px;
+  transition: 0.2s;
+}
+
+.btn-payslip:hover {
+  background: #0D9488; /* darker teal */
+}
+
+/* Update Salary Button */
+.btn-update {
+  background: #10B981; /* emerald green success */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.btn-update:hover {
+  background: #0F9A6E; /* dark success green */
+}
