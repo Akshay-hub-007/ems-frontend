@@ -22,7 +22,6 @@
   text-align: left;
 }
 
-/* Two-column grid for inputs */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
