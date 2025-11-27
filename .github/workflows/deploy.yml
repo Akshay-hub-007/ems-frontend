@@ -27,3 +27,5 @@ jobs:
           tags: |
             akshay694/emp-frontend:latest
             akshay694/emp-frontend:${{ github.sha }}
+          build-args: |
+            VITE_API_URL=${{ secrets.VITE_API_URL }}
